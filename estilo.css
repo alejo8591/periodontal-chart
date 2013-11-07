@@ -1,0 +1,1800 @@
+html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: arial, trebuchet;
+	font-size: 10pt;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#wrapper{
+	margin: 0 auto;
+	background: #ffffff;
+	padding: 0 20px;
+	width: 980px;
+}
+#tabla-superior{
+	margin: 0 auto;
+	background: #ffffff;
+}
+#tabla-superior table{
+	width: 100%;
+}
+#tabla-1 td, #tabla-2 td,#tabla-3 td,#tabla-4 td,
+#tabla-5 td, #tabla-6 td,#tabla-7 td,#tabla-8 td{
+	height: 0px;
+	min-width: 39px;
+	vertical-align: middle;
+}
+#tabla-resultados{
+	width: 100%;
+	background: #ffffff;
+	padding: 15px 5px;
+	font-weight: bold;
+}
+#evaluador,#registro,#paciente,#apellidos,#fecha,#notas,#diagnostico,#tratamiento{ 
+	width: 100%;
+	font-size: 12px;
+	border: 1px solid #b4b4b4;
+	text-align:left;
+}
+
+
+#paciente, #apellidos, #fecha {
+	width:120px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+#datos-personales{
+	width: 100%;
+	margin: 20px 0;
+}
+#datos-personales td{
+	padding: 5px 1px;
+	vertical-align: middle;
+}
+#separador{
+	width: 100%;
+	background: #090b52;
+	color: #ffffff;
+	font-weight: bold;
+}
+#separador td{
+	padding: 2px 90px;
+}
+#tabla-titulo {
+	width: 100%;
+}
+#tabla-titulo td{
+	vertical-align: middle;
+	padding: 0 27px;
+}
+#datos-personales span,#tabla-titulo span{
+	font-size: 140%;
+	font-weight: bold;
+	color: #565A5D;
+}
+
+#tabla-titulo td{
+	font-size: 12px;
+	font-weight: bold;
+	color: #565A5D;
+}
+
+h2{
+	font-size: 14px;
+	font-weight: bold;
+	color: #565A5D;
+}
+
+#datos-personales td{
+	font-size: 12px;
+	/*font-weight: bold;*/
+	color: #565A5D;
+}
+
+#tabla-titulo input{
+	background-color: #E5EAE9;
+	border:none;
+}
+
+input{
+	width: 11px;
+	height: 18px;
+	margin: 0;
+	font-size: 9px;
+	border: none;
+	text-align: center;
+	outline: none;
+	
+}
+.titulo{
+	text-align: right;
+	padding-right: 5px;
+	font-weight:bold;
+	
+}	
+.borde{
+		border: 1px solid #a4a4a4;
+		/* padding: 1px; */
+		text-align: center;
+		font-size: 9px;
+	}
+.noborde{
+		/*padding:2px 0 7px;*/
+		margin:0;
+		text-align: center;
+}
+
+#suma,#suma2,#suma3,#suma3-neg,#suma4,#suma5{display:inline;}
+
+/* TABLE 1 */
+
+#d18,#d17,#d16,#d15,#d14,#d13,#d12,#d11{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d18:hover,#d17:hover,#d16:hover,#d15:hover,#d14:hover,#d13:hover,#d12:hover,#d11:hover{
+	background: #E6E6E6;
+}
+	
+#i18,#i17,#i16,#i15,#i14,#i13,#i12,#i11{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i18:hover,#i17:hover,#i16:hover,#i15:hover,#i14:hover,#i13:hover,#i12:hover,#i11:hover{
+	background: #E6E6E6;
+}
+
+#i18-implante,#i17-implante,#i16-implante,#i15-implante,#i14-implante,#i13-implante,#i12-implante,#i11-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -12px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f18,#f17,#f16,
+#f26,#f27,#f28{
+	width: 95%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+#f18:hover,#f17:hover,#f16:hover,
+#f26:hover,#f27:hover,#f28:hover{
+	background: #E6E6E6;
+}
+#furca18,#furca17,#furca16,
+#furca26,#furca27,#furca28{
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	margin: 70px 20px;
+}
+
+#ps18-a,#ps18-b,#ps18-c,
+#ps17-a,#ps17-b,#ps17-c,
+#ps16-a,#ps16-b,#ps16-c,
+#ps15-a,#ps15-b,#ps15-c,
+#ps14-a,#ps14-b,#ps14-c,
+#ps13-a,#ps13-b,#ps13-c,
+#ps12-a,#ps12-b,#ps12-c,
+#ps11-a,#ps11-b,#ps11-c,
+#ps18-a,#ps18-b,#ps18-c,
+#ps21-a,#ps21-b,#ps21-c,
+#ps22-a,#ps22-b,#ps22-c,
+#ps23-a,#ps23-b,#ps23-c,
+#ps24-a,#ps24-b,#ps24-c,
+#ps25-a,#ps25-b,#ps25-c,
+#ps26-a,#ps26-b,#ps26-c,
+#ps27-a,#ps27-b,#ps27-c,
+#ps28-a,#ps28-b,#ps28-c {
+	color: #333;
+}
+
+#s18-a,#s18-b,#s18-c,
+#s17-a,#s17-b,#s17-c,
+#s16-a,#s16-b,#s16-c,
+#s15-a,#s15-b,#s15-c,
+#s14-a,#s14-b,#s14-c,
+#s13-a,#s13-b,#s13-c,
+#s12-a,#s12-b,#s12-c,
+#s11-a,#s11-b,#s11-c,
+#p18-a,#p18-b,#p18-c,
+#p17-a,#p17-b,#p17-c,
+#p16-a,#p16-b,#p16-c,
+#p15-a,#p15-b,#p15-c,
+#p14-a,#p14-b,#p14-c,
+#p13-a,#p13-b,#p13-c,
+#p12-a,#p12-b,#p12-c,
+#p11-a,#p11-b,#p11-c,
+#ae18-a,#ae18-b,#ae18-c,
+#ae17-a,#ae17-b,#ae17-c,
+#ae16-a,#ae16-b,#ae16-c,
+#ae15-a,#ae15-b,#ae15-c,
+#ae14-a,#ae14-b,#ae14-c,
+#ae13-a,#ae13-b,#ae13-c,
+#ae12-a,#ae12-b,#ae12-c,
+#ae11-a,#ae11-b,#ae11-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s18-a:hover,#s18-b:hover,#s18-c:hover,
+#s17-a:hover,#s17-b:hover,#s17-c:hover,
+#s16-a:hover,#s16-b:hover,#s16-c:hover,
+#s15-a:hover,#s15-b:hover,#s15-c:hover,
+#s14-a:hover,#s14-b:hover,#s14-c:hover,
+#s13-a:hover,#s13-b:hover,#s13-c:hover,
+#s12-a:hover,#s12-b:hover,#s12-c:hover,
+#s11-a:hover,#s11-b:hover,#s11-c:hover,
+#p18-a:hover,#p18-b:hover,#p18-c:hover,
+#p17-a:hover,#p17-b:hover,#p17-c:hover,
+#p16-a:hover,#p16-b:hover,#p16-c:hover,
+#p15-a:hover,#p15-b:hover,#p15-c:hover,
+#p14-a:hover,#p14-b:hover,#p14-c:hover,
+#p13-a:hover,#p13-b:hover,#p13-c:hover,
+#p12-a:hover,#p12-b:hover,#p12-c:hover,
+#p11-a:hover,#p11-b:hover,#p11-c:hover,
+#ae18-a:hover,#ae18-b:hover,#ae18-c:hover,
+#ae17-a:hover,#ae17-b:hover,#ae17-c:hover,
+#ae16-a:hover,#ae16-b:hover,#ae16-c:hover,
+#ae15-a:hover,#ae15-b:hover,#ae15-c:hover,
+#ae14-a:hover,#ae14-b:hover,#ae14-c:hover,
+#ae13-a:hover,#ae13-b:hover,#ae13-c:hover,
+#ae12-a:hover,#ae12-b:hover,#ae12-c:hover,
+#ae11-a:hover,#ae11-b:hover,#ae11-c:hover{
+	background: #E6E6E6;
+}
+
+#diente18-a,#diente17-a,#diente16-a,#diente15-a,#diente14-a,#diente13-a,#diente12-a,#diente11-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente18-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-18.png');
+	width:54px;
+	background-position: 0 -2px;
+	background-repeat: no-repeat;
+}
+#diente17-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-17.png');
+	width:57px;
+	/*background-position: */
+	background-repeat: no-repeat;
+}
+#diente16-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-16.png');
+	width:62px;
+	background-position: 0 4px;
+	background-repeat: no-repeat;
+}
+#diente15-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-15.png');
+	width:42px;
+	background-position: 0 5px;
+	background-repeat: no-repeat;
+}
+#diente14-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-14.png');
+	width:46px;
+	/*background-position: */
+	background-repeat: no-repeat;
+}
+#diente13-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-13.png');
+	width:42px;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+#diente12-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-12.png');
+	width:38px;
+	background-position: 0px 6px;
+	background-repeat: no-repeat;
+}
+#diente11-a{
+	background: url('img/tabla1/periodontograma-dientes-arriba-11.png');
+	width:54px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+
+#ps18-a, #ps18-b, #ps18-c{
+	color: #333;
+	font-size: 9px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* visualization svg of google  visualization */
+#visualization18a, #visualization17a {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization16a{
+	width: 55px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 3px;
+}
+
+#visualization15a, #visualization14a{
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization13a{
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 5px;
+}
+
+#visualization12a{
+	width: 27px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 7px;
+}
+#visualization11a{
+	width: 33px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 13px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+
+/*TABLE 2*/
+
+#n18,#n17,#n16,#n15,#n14,#n13,#n12,#n11,
+#n21,#n22,#n23,#n24,#n25,#n26,#n27,#n28{
+	width:35px;
+}
+
+#d21,#d22,#d23,#d24,#d25,#d26,#d27,#d28{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d21:hover,#d22:hover,#d23:hover,#d24:hover,#d25:hover,#d26:hover,#d27:hover,#d28:hover{
+	background: #E6E6E6;
+}
+	
+#i21,#i22,#i23,#i24,#i25,#i26,#i27,#i28{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i21:hover,#i22:hover,#i23:hover,#i24:hover,#i25:hover,#i26:hover,#i27:hover,#i28:hover{
+	background: #E6E6E6;
+}
+
+#i21-implante,#i22-implante,#i23-implante,#i24-implante,#i25-implante,#i26-implante,#i27-implante,#i28-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -27px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f26,#f27,#f28{
+	width: 95%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+#f26:hover,#f27:hover,#f28:hover{
+	background: #E6E6E6;
+}
+#s21-a,#s21-b,#s21-c,
+#s22-a,#s22-b,#s22-c,
+#s23-a,#s23-b,#s23-c,
+#s24-a,#s24-b,#s24-c,
+#s25-a,#s25-b,#s25-c,
+#s26-a,#s26-b,#s26-c,
+#s27-a,#s27-b,#s27-c,
+#s28-a,#s28-b,#s28-c,
+#p21-a,#p21-b,#p21-c,
+#p22-a,#p22-b,#p22-c,
+#p23-a,#p23-b,#p23-c,
+#p24-a,#p24-b,#p24-c,
+#p25-a,#p25-b,#p25-c,
+#p26-a,#p26-b,#p26-c,
+#p27-a,#p27-b,#p27-c,
+#p28-a,#p28-b,#p28-c,
+#ae21-a,#ae21-b,#ae21-c,
+#ae22-a,#ae22-b,#ae22-c,
+#ae23-a,#ae23-b,#ae23-c,
+#ae24-a,#ae24-b,#ae24-c,
+#ae25-a,#ae25-b,#ae25-c,
+#ae26-a,#ae26-b,#ae26-c,
+#ae27-a,#ae27-b,#ae27-c,
+#ae28-a,#ae28-b,#ae28-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s21-a:hover,#s21-b:hover,#s21-c:hover,
+#s22-a:hover,#s22-b:hover,#s22-c:hover,
+#s23-a:hover,#s23-b:hover,#s23-c:hover,
+#s24-a:hover,#s24-b:hover,#s24-c:hover,
+#s25-a:hover,#s25-b:hover,#s25-c:hover,
+#s26-a:hover,#s26-b:hover,#s26-c:hover,
+#s27-a:hover,#s27-b:hover,#s27-c:hover,
+#s28-a:hover,#s28-b:hover,#s28-c:hover,
+#p21-a:hover,#p21-b:hover,#p21-c:hover,
+#p22-a:hover,#p22-b:hover,#p22-c:hover,
+#p23-a:hover,#p23-b:hover,#p23-c:hover,
+#p24-a:hover,#p24-b:hover,#p24-c:hover,
+#p25-a:hover,#p25-b:hover,#p25-c:hover,
+#p26-a:hover,#p26-b:hover,#p26-c:hover,
+#p27-a:hover,#p27-b:hover,#p27-c:hover,
+#p28-a:hover,#p28-b:hover,#p28-c:hover,
+#ae21-a:hover,#ae21-b:hover,#ae21-c:hover,
+#ae22-a:hover,#ae22-b:hover,#ae22-c:hover,
+#ae23-a:hover,#ae23-b:hover,#ae23-c:hover,
+#ae24-a:hover,#ae24-b:hover,#ae24-c:hover,
+#ae25-a:hover,#ae25-b:hover,#ae25-c:hover,
+#ae26-a:hover,#ae26-b:hover,#ae26-c:hover,
+#ae27-a:hover,#ae27-b:hover,#ae27-c:hover,
+#ae28-a:hover,#ae28-b:hover,#ae28-c:hover{
+	background: #E6E6E6;
+}
+
+#diente21-a,#diente22-a,#diente23-a,#diente24-a,#diente25-a,#diente26-a,#diente27-a,#diente28-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente21-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-21.png');
+	width:53px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+#diente22-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-22.png');
+	width:38px;
+	background-position: 0px 6px;
+	background-repeat: no-repeat;
+}
+#diente23-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-23.png');
+	width:43px;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+#diente24-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-24.png');
+	width:43px;
+	/*background-position: */
+	background-repeat: no-repeat;
+}
+#diente25-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-25.png');
+	width:42px;
+	background-position: 0 5px;
+	background-repeat: no-repeat;
+}
+#diente26-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-26.png');
+	width:64px;
+	background-position: 0 4px;
+	background-repeat: no-repeat;
+}
+#diente27-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-27.png');
+	width:56px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+#diente28-a{
+	background: url('img/tabla2/periodontograma-dientes-arriba-28.png');
+	width:54px;
+	background-position: 0 -2px;
+	background-repeat: no-repeat;
+}
+
+/* ----------------------------------------------------------------------- */
+/* visualization svg of google  visualization */
+#visualization21a {
+	width: 33px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 7px;
+
+}
+#visualization22a {
+	width: 27px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 5px;
+
+}
+#visualization23a {
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 11px;
+}
+#visualization24a {
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+#visualization25a {
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+#visualization26a {
+	width: 55px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 3px;
+}
+
+#visualization27a {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization28a {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/*Second part of table */
+
+
+#d18b,#d17b,#d16b,#d15b,#d14b,#d13b,#d12b,#d11b{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d18b:hover,#d17b:hover,#d16b:hover,#d15b:hover,#d14b:hover,#d13b:hover,#d12b:hover,#d11b:hover{
+	background: #E6E6E6;
+}
+	
+#i18b,#i17b,#i16b,#i15b,#i14b,#i13b,#i12b,#i11b{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i18b:hover,#i17b:hover,#i16b:hover,#i15b:hover,#i14b:hover,#i13b:hover,#i12b:hover,#i11b:hover{
+	background: #E6E6E6;
+}
+
+#i18b-implante,#i17b-implante,#i16b-implante,#i15b-implante,#i14b-implante,#i13b-implante,#i12b-implante,#i11b-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -12px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f18b-a,#f18b-b,#f17b-a,#f17b-b,#f16b-a,#f16b-b,#f14b-a,#f14b-b{
+	width: 42%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+#f18b-a,#f17b-a,#f16b-a,#f14b-a{
+	border-right:1px solid #000000;
+}
+#f18b-a:hover,#f18b-b:hover,#f17b-a:hover,#f17b-b:hover,#f16b-a:hover,#f16b-b:hover{
+	background: #E6E6E6;
+}
+
+#s18b-a,#s18b-b,#s18b-c,
+#s17b-a,#s17b-b,#s17b-c,
+#s16b-a,#s16b-b,#s16b-c,
+#s15b-a,#s15b-b,#s15b-c,
+#s14b-a,#s14b-b,#s14b-c,
+#s13b-a,#s13b-b,#s13b-c,
+#s12b-a,#s12b-b,#s12b-c,
+#s11b-a,#s11b-b,#s11b-c,
+#p18b-a,#p18b-b,#p18b-c,
+#p17b-a,#p17b-b,#p17b-c,
+#p16b-a,#p16b-b,#p16b-c,
+#p15b-a,#p15b-b,#p15b-c,
+#p14b-a,#p14b-b,#p14b-c,
+#p13b-a,#p13b-b,#p13b-c,
+#p12b-a,#p12b-b,#p12b-c,
+#p11b-a,#p11b-b,#p11b-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s18b-a:hover,#s18b-b:hover,#s18b-c:hover,
+#s17b-a:hover,#s17b-b:hover,#s17b-c:hover,
+#s16b-a:hover,#s16b-b:hover,#s16b-c:hover,
+#s15b-a:hover,#s15b-b:hover,#s15b-c:hover,
+#s14b-a:hover,#s14b-b:hover,#s14b-c:hover,
+#s13b-a:hover,#s13b-b:hover,#s13b-c:hover,
+#s12b-a:hover,#s12b-b:hover,#s12b-c:hover,
+#s11b-a:hover,#s11b-b:hover,#s11b-c:hover,
+#p18b-a:hover,#p18b-b:hover,#p18b-c:hover,
+#p17b-a:hover,#p17b-b:hover,#p17b-c:hover,
+#p16b-a:hover,#p16b-b:hover,#p16b-c:hover,
+#p15b-a:hover,#p15b-b:hover,#p15b-c:hover,
+#p14b-a:hover,#p14b-b:hover,#p14b-c:hover,
+#p13b-a:hover,#p13b-b:hover,#p13b-c:hover,
+#p12b-a:hover,#p12b-b:hover,#p12b-c:hover,
+#p11b-a:hover,#p11b-b:hover,#p11b-c:hover{
+	background: #E6E6E6;
+}
+
+/*#pg18b-a,#pg18b-b,#pg18b-c,
+#pg17b-a,#pg17b-b,#pg17b-c,
+#pg16b-a,#pg16b-b,#pg16b-c,
+#pg15b-a,#pg15b-b,#pg15b-c,
+#pg14b-a,#pg14b-b,#pg14b-c,
+#pg13b-a,#pg13b-b,#pg13b-c,
+#pg12b-a,#pg12b-b,#pg12b-c,
+#pg11b-a,#pg11b-b,#pg11b-c,
+#ps18b-a,#ps18b-b,#ps18b-c,
+#ps17b-a,#ps17b-b,#ps17b-c,
+#ps16b-a,#ps16b-b,#ps16b-c,
+#ps15b-a,#ps15b-b,#ps15b-c,
+#ps14b-a,#ps14b-b,#ps14b-c,
+#ps13b-a,#ps13b-b,#ps13b-c,
+#ps12b-a,#ps12b-b,#ps12b-c,
+#ps11b-a,#ps11b-b,#ps11b-c{
+	width: 13px;
+	height: 18px;
+	background: none;
+	float:left;
+	display:inline;
+	margin: 2px;
+	text-align:center;
+	border:none;
+}*/
+
+#ps18b-a,#ps18b-b,#ps18b-c,
+#ps17b-a,#ps17b-b,#ps17b-c,
+#ps16b-a,#ps16b-b,#ps16b-c,
+#ps15b-a,#ps15b-b,#ps15b-c,
+#ps14b-a,#ps14b-b,#ps14b-c,
+#ps13b-a,#ps13b-b,#ps13b-c,
+#ps12b-a,#ps12b-b,#ps12b-c,
+#ps11b-a,#ps11b-b,#ps11b-c{
+	color: #333;
+}
+
+
+#diente18b-a,#diente17b-a,#diente16b-a,
+#diente15b-a,#diente14b-a,#diente13b-a,
+#diente12b-a,#diente11b-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente18b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-18b.png');
+	width:54px;
+	background-position: 0 23px;
+	background-repeat: no-repeat;
+}
+#diente17b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-17b.png');
+	width:57px;
+	background-position: 0 24px;
+	background-repeat: no-repeat;
+}
+#diente16b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-16b.png');
+	width:62px;
+	background-position: 0 22px;
+	background-repeat: no-repeat;
+}
+#diente15b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-15b.png');
+	width:42px;
+	background-position: 0 17px;
+	background-repeat: no-repeat;
+}
+#diente14b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-14b.png');
+	width:46px;
+	background-position: 0 17px;
+	background-repeat: no-repeat;
+}
+#diente13b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-13b.png');
+	width:42px;
+	background-position: 0 16px;
+	background-repeat: no-repeat;
+}
+#diente12b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-12b.png');
+	width:45px;
+	background-position: 0 18px;
+	background-repeat: no-repeat;
+}
+#diente11b-a{
+	background: url('img/tabla3/periodontograma-dientes-arriba-11b.png');
+	width:54px;
+	background-position: 0 12px;
+	background-repeat: no-repeat;
+}
+/* ----------------------------------------------------------------------- */
+/* visualization svg of google  visualization */
+#visualization18b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 4px;
+}
+
+#visualization17b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 7px;
+}
+
+#visualization16b {
+	width: 48px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 5px;
+}
+#visualization15b {
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 6px;
+}
+
+#visualization14b {
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 9px;
+}
+
+#visualization13b {
+	width: 28px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 9px;
+}
+
+#visualization12b {
+	width: 26px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 9px;
+}
+
+#visualization11b {
+	width: 33px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 4px;
+}
+/* ----------------------------------------------------------------------- */
+/*TABLA 4*/
+
+#d21b,#d22b,#d23b,#d24b,#d25b,#d26b,#d27b,#d28b{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d21b:hover,#d22b:hover,#d23b:hover,#d24b:hover,#d25b:hover,#d26b:hover,#d27b:hover,#d28b:hover{
+	background: #E6E6E6;
+}
+	
+#i21b,#i22b,#i23b,#i24b,#i25b,#i26b,#i27b,#i28b{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i21b:hover,#i22b:hover,#i23b:hover,#i24b:hover,#i25b:hover,#i26b:hover,#i27b:hover,#i28b:hover{
+	background: #E6E6E6;
+}
+
+#i21b-implante,#i22b-implante,#i23b-implante,#i24b-implante,#i25b-implante,#i26b-implante,#i27b-implante,#i28b-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -27px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f24b-a,#f24b-b,#f26b-a,#f26b-b,#f27b-a,#f27b-b,#f28b-a,#f28b-b{
+	width: 42%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+#f24b-a,#f26b-a,#f27b-a,#f28b-a{
+	border-right:1px solid #000000;
+}
+
+#f24b-a:hover,#f24b-b:hover,#f26b-a:hover,#f26b-b:hover,#f27b-a:hover,#f27b-b:hover,#f28b-a:hover,#f28b-b:hover{
+	background: #E6E6E6;
+}
+#s21b-a,#s21b-b,#s21b-c,
+#s22b-a,#s22b-b,#s22b-c,
+#s23b-a,#s23b-b,#s23b-c,
+#s24b-a,#s24b-b,#s24b-c,
+#s25b-a,#s25b-b,#s25b-c,
+#s26b-a,#s26b-b,#s26b-c,
+#s27b-a,#s27b-b,#s27b-c,
+#s28b-a,#s28b-b,#s28b-c,
+#p21b-a,#p21b-b,#p21b-c,
+#p22b-a,#p22b-b,#p22b-c,
+#p23b-a,#p23b-b,#p23b-c,
+#p24b-a,#p24b-b,#p24b-c,
+#p25b-a,#p25b-b,#p25b-c,
+#p26b-a,#p26b-b,#p26b-c,
+#p27b-a,#p27b-b,#p27b-c,
+#p28b-a,#p28b-b,#p28b-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s21b-a:hover,#s21b-b:hover,#s21b-c:hover,
+#s22b-a:hover,#s22b-b:hover,#s22b-c:hover,
+#s23b-a:hover,#s23b-b:hover,#s23b-c:hover,
+#s24b-a:hover,#s24b-b:hover,#s24b-c:hover,
+#s25b-a:hover,#s25b-b:hover,#s25b-c:hover,
+#s26b-a:hover,#s26b-b:hover,#s26b-c:hover,
+#s27b-a:hover,#s27b-b:hover,#s27b-c:hover,
+#s28b-a:hover,#s28b-b:hover,#s28b-c:hover,
+#p21b-a:hover,#p21b-b:hover,#p21b-c:hover,
+#p22b-a:hover,#p22b-b:hover,#p22b-c:hover,
+#p23b-a:hover,#p23b-b:hover,#p23b-c:hover,
+#p24b-a:hover,#p24b-b:hover,#p24b-c:hover,
+#p25b-a:hover,#p25b-b:hover,#p25b-c:hover,
+#p26b-a:hover,#p26b-b:hover,#p26b-c:hover,
+#p27b-a:hover,#p27b-b:hover,#p27b-c:hover,
+#p28b-a:hover,#p28b-b:hover,#p28b-c:hover{
+	background: #E6E6E6;
+}
+/*#pg21b-a,#pg21b-b,#pg21b-c,
+#pg22b-a,#pg22b-b,#pg22b-c,
+#pg23b-a,#pg23b-b,#pg23b-c,
+#pg24b-a,#pg24b-b,#pg24b-c,
+#pg25b-a,#pg25b-b,#pg25b-c,
+#pg26b-a,#pg26b-b,#pg26b-c,
+#pg27b-a,#pg27b-b,#pg27b-c,
+#pg28b-a,#pg28b-b,#pg28b-c,
+#ps21b-a,#ps21b-b,#ps21b-c,
+#ps22b-a,#ps22b-b,#ps22b-c,
+#ps23b-a,#ps23b-b,#ps23b-c,
+#ps24b-a,#ps24b-b,#ps24b-c,
+#ps25b-a,#ps25b-b,#ps25b-c,
+#ps26b-a,#ps26b-b,#ps26b-c,
+#ps27b-a,#ps27b-b,#ps27b-c,
+#ps28b-a,#ps28b-b,#ps28b-c{
+	width: 26px;
+	height: 21px;
+	background: none;
+	float:left;
+	display:inline;
+	margin: 2px;
+	text-align:center;
+	border:none;
+}*/
+
+#ps21b-a,#ps21b-b,#ps21b-c,
+#ps22b-a,#ps22b-b,#ps22b-c,
+#ps23b-a,#ps23b-b,#ps23b-c,
+#ps24b-a,#ps24b-b,#ps24b-c,
+#ps25b-a,#ps25b-b,#ps25b-c,
+#ps26b-a,#ps26b-b,#ps26b-c,
+#ps27b-a,#ps27b-b,#ps27b-c,
+#ps28b-a,#ps28b-b,#ps28b-c{
+	color: #333;
+}
+
+#diente21b-a,#diente22b-a,#diente23b-a,#diente24b-a,#diente25b-a,#diente26b-a,#diente27b-a,#diente28b-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente21b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-21b.png');
+	width:53px;
+	background-position: 0 11px;
+	background-repeat: no-repeat;
+}
+#diente22b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-22b.png');
+	width:44px;
+	background-position: 0px 17px;
+	background-repeat: no-repeat;
+}
+#diente23b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-23b.png');
+	width:43px;
+	background-position: 0 15px;
+	background-repeat: no-repeat;
+}
+#diente24b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-24b.png');
+	width:43px;
+	background-position: 0 16px;
+	background-repeat: no-repeat;
+}
+#diente25b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-25b.png');
+	width:42px;
+	background-position: 0 16px;
+	background-repeat: no-repeat;
+}
+#diente26b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-26b.png');
+	width:64px;
+	background-position: 0 21px;
+	background-repeat: no-repeat;
+}
+#diente27b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-27b.png');
+	width:56px;
+	background-position: 0px 24px;
+	background-repeat: no-repeat;
+}
+#diente28b-a{
+	background: url('img/tabla4/periodontograma-dientes-arriba-28b.png');
+	width:54px;
+	background-position: 0 23px;
+	background-repeat: no-repeat;
+}
+
+#furca18-a,#furca18-b,#furca17-a,#furca17-b,#furca16-a,#furca16-b,#furca14-a,#furca14-b,
+#furca24-a,#furca24-b,#furca26-a,#furca26-b,#furca27-a,#furca27-b,#furca28-a,#furca28-b{
+	width: 18px;
+	height: 18px;
+	position: absolute;
+}
+#furca18-a,#furca17-a,#furca16-a,#furca14-a,
+#furca24-a,#furca26-a,#furca27-a,#furca28-a{
+	margin-top: 70px;
+}
+#furca18-b,#furca17-b,#furca16-b,#furca14-b,
+#furca24-b,#furca26-b,#furca27-b,#furca28-b{
+	margin-top: 80px;
+	margin-left: 28px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* visualization svg of google  visualization */
+#visualization21b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization22b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 4px;
+}
+
+#visualization23b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 1px;
+}
+
+#visualization24b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 3px;
+}
+
+#visualization25b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 4px;
+}
+
+#visualization26b {
+	width: 48px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 11px;
+}
+
+#visualization27b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 11px;
+}
+
+#visualization28b {
+	width: 40px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* TABLA 5*/
+
+48,#d47,#d46,#d45,#d44,#d43,#d42,#d41{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d48:hover,#d47:hover,#d46:hover,#d45:hover,#d44:hover,#d43:hover,#d42:hover,#d41:hover{
+	background: #E6E6E6;
+}
+	
+#i48,#i47,#i46,#i45,#i44,#i43,#i42,#i41{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i48:hover,#i47:hover,#i46:hover,#i45:hover,#i44:hover,#i43:hover,#i42:hover,#i41:hover{
+	background: #E6E6E6;
+}
+
+#i48-implante,#i47-implante,#i46-implante,#i45-implante,#i44-implante,#i43-implante,#i42-implante,#i41-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -12px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f48,#f47,#f46,
+#f26,#f27,#f28{
+	width: 95%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+#f48:hover,#f47:hover,#f46:hover,
+#f26:hover,#f27:hover,#f28:hover{
+	background: #E6E6E6;
+}
+#furca48,#furca47,#furca46,
+#furca38,#furca37,#furca36,
+#furca26,#furca27,#furca28,
+#furca48b,#furca47b,#furca46b,
+#furca38b,#furca37b,#furca36b{
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	margin: 70px 20px;
+}
+#s48-a,#s48-b,#s48-c,
+#s47-a,#s47-b,#s47-c,
+#s46-a,#s46-b,#s46-c,
+#s45-a,#s45-b,#s45-c,
+#s44-a,#s44-b,#s44-c,
+#s43-a,#s43-b,#s43-c,
+#s42-a,#s42-b,#s42-c,
+#s41-a,#s41-b,#s41-c,
+#p48-a,#p48-b,#p48-c,
+#p47-a,#p47-b,#p47-c,
+#p46-a,#p46-b,#p46-c,
+#p45-a,#p45-b,#p45-c,
+#p44-a,#p44-b,#p44-c,
+#p43-a,#p43-b,#p43-c,
+#p42-a,#p42-b,#p42-c,
+#p41-a,#p41-b,#p41-c,
+#ea48-a,#ea48-b,#ea48-c,
+#ea47-a,#ea47-b,#ea47-c,
+#ea46-a,#ea46-b,#ea46-c,
+#ea45-a,#ea45-b,#ea45-c,
+#ea44-a,#ea44-b,#ea44-c,
+#ea43-a,#ea43-b,#ea43-c,
+#ea42-a,#ea42-b,#ea42-c,
+#ea41-a,#ea41-b,#ea41-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s48-a:hover,#s48-b:hover,#s48-c:hover,
+#s47-a:hover,#s47-b:hover,#s47-c:hover,
+#s46-a:hover,#s46-b:hover,#s46-c:hover,
+#s45-a:hover,#s45-b:hover,#s45-c:hover,
+#s44-a:hover,#s44-b:hover,#s44-c:hover,
+#s43-a:hover,#s43-b:hover,#s43-c:hover,
+#s42-a:hover,#s42-b:hover,#s42-c:hover,
+#s41-a:hover,#s41-b:hover,#s41-c:hover,
+#p48-a:hover,#p48-b:hover,#p48-c:hover,
+#p47-a:hover,#p47-b:hover,#p47-c:hover,
+#p46-a:hover,#p46-b:hover,#p46-c:hover,
+#p45-a:hover,#p45-b:hover,#p45-c:hover,
+#p44-a:hover,#p44-b:hover,#p44-c:hover,
+#p43-a:hover,#p43-b:hover,#p43-c:hover,
+#p42-a:hover,#p42-b:hover,#p42-c:hover,
+#p41-a:hover,#p41-b:hover,#p41-c:hover,
+#ea48-a:hover,#ea48-b:hover,#ea48-c:hover,
+#ea47-a:hover,#ea47-b:hover,#ea47-c:hover,
+#ea46-a:hover,#ea46-b:hover,#ea46-c:hover,
+#ea45-a:hover,#ea45-b:hover,#ea45-c:hover,
+#ea44-a:hover,#ea44-b:hover,#ea44-c:hover,
+#ea43-a:hover,#ea43-b:hover,#ea43-c:hover,
+#ea42-a:hover,#ea42-b:hover,#ea42-c:hover,
+#ea41-a:hover,#ea41-b:hover,#ea41-c:hover{
+	background: #E6E6E6;
+}
+
+#diente48-a,#diente47-a,#diente46-a,#diente45-a,#diente44-a,#diente43-a,#diente42-a,#diente41-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente48-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-48.png');
+	width:66px;
+	background-position: 0 -4px;
+	background-repeat: no-repeat;
+}
+#diente47-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-47.png');
+	width:61px;
+	background-position: 0 4px;
+	background-repeat: no-repeat;
+}
+#diente46-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-46.png');
+	width:66px;
+	background-position: 0 -1px;
+	background-repeat: no-repeat;
+}
+#diente45-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-45.png');
+	width:44px;
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+}
+#diente44-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-44.png');
+	width:42px;
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+}
+#diente43-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-43.png');
+	width:42px;
+	background-position: 0 7px;
+	background-repeat: no-repeat;
+}
+#diente42-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-42.png');
+	width:35px;
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+}
+#diente41-a{
+	background: url('img/tabla5/periodontograma-dientes-abajo-41.png');
+	width:36px;
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+}
+
+/*TABLA 6 */
+
+#d31,#d32,#d33,#d34,#d35,#d36,#d37,#d38{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d31:hover,#d32:hover,#d33:hover,#d34:hover,#d35:hover,#d36:hover,#d37:hover,#d38:hover{
+	background: #E6E6E6;
+}
+	
+#i31,#i32,#i33,#i34,#i35,#i36,#i37,#i38{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i31:hover,#i32:hover,#i33:hover,#i34:hover,#i35:hover,#i36:hover,#i37:hover,#i38:hover{
+	background: #E6E6E6;
+}
+
+#i31-implante,#i32-implante,#i33-implante,#i34-implante,#i35-implante,#i36-implante,#i37-implante,#i38-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -12px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f31,#f32,#f33,
+#f26,#f27,#f28,
+#f36,#f37,#f38{
+	width: 95%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+#f31:hover,#f32:hover,#f33:hover,
+#f26:hover,#f27:hover,#f28:hover{
+	background: #E6E6E6;
+}
+#furca31,#furca32,#furca33,
+#furca26,#furca27,#furca28{
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	margin: 70px 20px;
+}
+#s31-a,#s31-b,#s31-c,
+#s32-a,#s32-b,#s32-c,
+#s33-a,#s33-b,#s33-c,
+#s34-a,#s34-b,#s34-c,
+#s35-a,#s35-b,#s35-c,
+#s36-a,#s36-b,#s36-c,
+#s37-a,#s37-b,#s37-c,
+#s38-a,#s38-b,#s38-c,
+#p31-a,#p31-b,#p31-c,
+#p32-a,#p32-b,#p32-c,
+#p33-a,#p33-b,#p33-c,
+#p34-a,#p34-b,#p34-c,
+#p35-a,#p35-b,#p35-c,
+#p36-a,#p36-b,#p36-c,
+#p37-a,#p37-b,#p37-c,
+#p38-a,#p38-b,#p38-c,
+#ea31-a,#ea31-b,#ea31-c,
+#ea32-a,#ea32-b,#ea32-c,
+#ea33-a,#ea33-b,#ea33-c,
+#ea34-a,#ea34-b,#ea34-c,
+#ea35-a,#ea35-b,#ea35-c,
+#ea36-a,#ea36-b,#ea36-c,
+#ea37-a,#ea37-b,#ea37-c,
+#ea38-a,#ea38-b,#ea38-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s31-a:hover,#s31-b:hover,#s31-c:hover,
+#s32-a:hover,#s32-b:hover,#s32-c:hover,
+#s33-a:hover,#s33-b:hover,#s33-c:hover,
+#s34-a:hover,#s34-b:hover,#s34-c:hover,
+#s35-a:hover,#s35-b:hover,#s35-c:hover,
+#s36-a:hover,#s36-b:hover,#s36-c:hover,
+#s37-a:hover,#s37-b:hover,#s37-c:hover,
+#s38-a:hover,#s38-b:hover,#s38-c:hover,
+#p31-a:hover,#p31-b:hover,#p31-c:hover,
+#p32-a:hover,#p32-b:hover,#p32-c:hover,
+#p33-a:hover,#p33-b:hover,#p33-c:hover,
+#p34-a:hover,#p34-b:hover,#p34-c:hover,
+#p35-a:hover,#p35-b:hover,#p35-c:hover,
+#p36-a:hover,#p36-b:hover,#p36-c:hover,
+#p37-a:hover,#p37-b:hover,#p37-c:hover,
+#p38-a:hover,#p38-b:hover,#p38-c:hover,
+#ea31-a:hover,#ea31-b:hover,#ea31-c:hover,
+#ea32-a:hover,#ea32-b:hover,#ea32-c:hover,
+#ea33-a:hover,#ea33-b:hover,#ea33-c:hover,
+#ea34-a:hover,#ea34-b:hover,#ea34-c:hover,
+#ea35-a:hover,#ea35-b:hover,#ea35-c:hover,
+#ea36-a:hover,#ea36-b:hover,#ea36-c:hover,
+#ea37-a:hover,#ea37-b:hover,#ea37-c:hover,
+#ea38-a:hover,#ea38-b:hover,#ea38-c:hover{
+	background: #E6E6E6;
+}
+
+#diente31-a,#diente32-a,#diente33-a,#diente34-a,#diente35-a,#diente36-a,#diente37-a,#diente38-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente31-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-31.png');
+	width:37px;
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+}
+#diente32-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-32.png');
+	width:37px;
+	background-position: 0 3px;
+	background-repeat: no-repeat;
+}
+#diente33-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-33.png');
+	width:41px;
+	background-position: 0 7px;
+	background-repeat: no-repeat;
+}
+#diente34-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-34.png');
+	width:42px;
+	background-position: 0 5px;
+	background-repeat: no-repeat;
+}
+#diente35-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-35.png');
+	width:44px;
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+}
+#diente36-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-36.png');
+	width:66px;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+#diente37-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-37.png');
+	width:62px;
+	background-position: 0px -4px;
+	background-repeat: no-repeat;
+}
+#diente38-a{
+	background: url('img/tabla6/periodontograma-dientes-abajo-38.png');
+	width:66px;
+	background-position: 0 -3px;
+	background-repeat: no-repeat;
+}
+
+/*TABLA 7*/
+#d48b,#d47b,#d46b,#d45b,#d44b,#d43b,#d42b,#d41b{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d48b:hover,#d47b:hover,#d46b:hover,#d45b:hover,#d44b:hover,#d43b:hover,#d42b:hover,#d41b:hover{
+	background: #E6E6E6;
+}
+	
+#i48b,#i47b,#i46b,#i45b,#i44b,#i43b,#i42b,#i41b{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i48b:hover,#i47b:hover,#i46b:hover,#i45b:hover,#i44b:hover,#i43b:hover,#i42b:hover,#i41b:hover{
+	background: #E6E6E6;
+}
+
+#i48b-implante,#i47b-implante,#i46b-implante,#i45b-implante,#i44b-implante,#i43b-implante,#i42b-implante,#i41b-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -42px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f48b,#f47b,#f46b,#f44b{
+	width: 95%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+
+#f48b:hover,#f47b:hover,#f46b:hover{
+	background: #E6E6E6;
+}
+#s48b-a,#s48b-b,#s48b-c,
+#s47b-a,#s47b-b,#s47b-c,
+#s46b-a,#s46b-b,#s46b-c,
+#s45b-a,#s45b-b,#s45b-c,
+#s44b-a,#s44b-b,#s44b-c,
+#s43b-a,#s43b-b,#s43b-c,
+#s42b-a,#s42b-b,#s42b-c,
+#s41b-a,#s41b-b,#s41b-c,
+#p48b-a,#p48b-b,#p48b-c,
+#p47b-a,#p47b-b,#p47b-c,
+#p46b-a,#p46b-b,#p46b-c,
+#p45b-a,#p45b-b,#p45b-c,
+#p44b-a,#p44b-b,#p44b-c,
+#p43b-a,#p43b-b,#p43b-c,
+#p42b-a,#p42b-b,#p42b-c,
+#p41b-a,#p41b-b,#p41b-c,
+#ea48b-a,#ea48b-b,#ea48b-c,
+#ea47b-a,#ea47b-b,#ea47b-c,
+#ea46b-a,#ea46b-b,#ea46b-c,
+#ea45b-a,#ea45b-b,#ea45b-c,
+#ea44b-a,#ea44b-b,#ea44b-c,
+#ea43b-a,#ea43b-b,#ea43b-c,
+#ea42b-a,#ea42b-b,#ea42b-c,
+#ea41b-a,#ea41b-b,#ea41b-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s48b-a:hover,#s48b-b:hover,#s48b-c:hover,
+#s47b-a:hover,#s47b-b:hover,#s47b-c:hover,
+#s46b-a:hover,#s46b-b:hover,#s46b-c:hover,
+#s45b-a:hover,#s45b-b:hover,#s45b-c:hover,
+#s44b-a:hover,#s44b-b:hover,#s44b-c:hover,
+#s43b-a:hover,#s43b-b:hover,#s43b-c:hover,
+#s42b-a:hover,#s42b-b:hover,#s42b-c:hover,
+#s41b-a:hover,#s41b-b:hover,#s41b-c:hover,
+#p48b-a:hover,#p48b-b:hover,#p48b-c:hover,
+#p47b-a:hover,#p47b-b:hover,#p47b-c:hover,
+#p46b-a:hover,#p46b-b:hover,#p46b-c:hover,
+#p45b-a:hover,#p45b-b:hover,#p45b-c:hover,
+#p44b-a:hover,#p44b-b:hover,#p44b-c:hover,
+#p43b-a:hover,#p43b-b:hover,#p43b-c:hover,
+#p42b-a:hover,#p42b-b:hover,#p42b-c:hover,
+#p41b-a:hover,#p41b-b:hover,#p41b-c:hover,
+#ea48b-a:hover,#ea48b-b:hover,#ea48b-c:hover,
+#ea47b-a:hover,#ea47b-b:hover,#ea47b-c:hover,
+#ea46b-a:hover,#ea46b-b:hover,#ea46b-c:hover,
+#ea45b-a:hover,#ea45b-b:hover,#ea45b-c:hover,
+#ea44b-a:hover,#ea44b-b:hover,#ea44b-c:hover,
+#ea43b-a:hover,#ea43b-b:hover,#ea43b-c:hover,
+#ea42b-a:hover,#ea42b-b:hover,#ea42b-c:hover,
+#ea41b-a:hover,#ea41b-b:hover,#ea41b-c:hover{
+	background: #E6E6E6;
+}
+
+#diente48b-a,#diente47b-a,#diente46b-a,#diente45b-a,#diente44b-a,#diente43b-a,#diente42b-a,#diente41b-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente48b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-48b.png');
+	width:61px;
+	background-position: 0 24px;
+	background-repeat: no-repeat;
+}
+#diente47b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-47b.png');
+	width:62px;
+	background-position: 0 22px;
+	background-repeat: no-repeat;
+}
+#diente46b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-46b.png');
+	width:68px;
+	background-position: 0 23px;
+	background-repeat: no-repeat;
+}
+#diente45b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-45b.png');
+	width:45px;
+	background-position: 0 20px;
+	background-repeat: no-repeat;
+}
+#diente44b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-44b.png');
+	width:42px;
+	background-position: 0 13px;
+	background-repeat: no-repeat;
+}
+#diente43b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-43b.png');
+	width:40px;
+	background-position: 0 12px;
+	background-repeat: no-repeat;
+}
+#diente42b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-42b.png');
+	width:39px;
+	background-position: 0 15px;
+	background-repeat: no-repeat;
+}
+#diente41b-a{
+	background: url('img/tabla7/periodontograma-dientes-abajo-41b.png');
+	width:37px;
+	background-position: 0 19px;
+	background-repeat: no-repeat;
+}
+
+/*TABLA 8*/
+
+#d31b,#d32b,#d33b,#d34b,#d35b,#d36b,#d37b,#d38b{
+	text-align: center;
+	font-size:10pt;
+	background: #E6E6E6;
+	width: 100%;
+}
+#d31b:hover,#d32b:hover,#d33b:hover,#d34b:hover,#d35b:hover,#d36b:hover,#d37b:hover,#d38b:hover{
+	background: #E6E6E6;
+}
+	
+#i31b,#i32b,#i33b,#i34b,#i35b,#i36b,#i37b,#i38b{
+background: url('img/periodontograma-oblicuas.png') repeat-x center;
+	width: 100%;
+	height:18px;
+}
+
+
+#i31b:hover,#i32b:hover,#i33b:hover,#i34b:hover,#i35b:hover,#i36b:hover,#i37b:hover,#i38b:hover{
+	background: #E6E6E6;
+}
+
+#i31b-implante,#i32b-implante,#i33b-implante,#i34b-implante,#i35b-implante,#i36b-implante,#i37b-implante,#i38b-implante{
+	display:none;
+	background: #000000;
+	width: 8px;
+	height:8px;
+	margin: -42px 20px;
+	position: absolute;
+	cursor: pointer;
+}
+#f36b,#f37b,#f38b{
+	width: 95%;
+	height: 18px;
+	background: #ffffff;
+	border: 1px solid #C3C9C8;
+	background-repeat: no-repeat;
+	float:left;
+	display:inline;
+}
+
+#f36b:hover,#f37b:hover,#f38b:hover{
+	background: #E6E6E6;
+}
+#s31b-a,#s31b-b,#s31b-c,
+#s32b-a,#s32b-b,#s32b-c,
+#s33b-a,#s33b-b,#s33b-c,
+#s34b-a,#s34b-b,#s34b-c,
+#s35b-a,#s35b-b,#s35b-c,
+#s36b-a,#s36b-b,#s36b-c,
+#s37b-a,#s37b-b,#s37b-c,
+#s38b-a,#s38b-b,#s38b-c,
+#p31b-a,#p31b-b,#p31b-c,
+#p32b-a,#p32b-b,#p32b-c,
+#p33b-a,#p33b-b,#p33b-c,
+#p34b-a,#p34b-b,#p34b-c,
+#p35b-a,#p35b-b,#p35b-c,
+#p36b-a,#p36b-b,#p36b-c,
+#p37b-a,#p37b-b,#p37b-c,
+#p38b-a,#p38b-b,#p38b-c,
+#ea31b-a,#ea31b-b,#ea31b-c,
+#ea32b-a,#ea32b-b,#ea32b-c,
+#ea33b-a,#ea33b-b,#ea33b-c,
+#ea34b-a,#ea34b-b,#ea34b-c,
+#ea35b-a,#ea35b-b,#ea35b-c,
+#ea36b-a,#ea36b-b,#ea36b-c,
+#ea37b-a,#ea37b-b,#ea37b-c,
+#ea38b-a,#ea38b-b,#ea38b-c{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C3C9C8;
+    display: inline;
+    float: left;
+    height: 18px;
+    margin: 1px;
+    width: 23%;
+}
+#s31b-a:hover,#s31b-b:hover,#s31b-c:hover,
+#s32b-a:hover,#s32b-b:hover,#s32b-c:hover,
+#s33b-a:hover,#s33b-b:hover,#s33b-c:hover,
+#s34b-a:hover,#s34b-b:hover,#s34b-c:hover,
+#s35b-a:hover,#s35b-b:hover,#s35b-c:hover,
+#s36b-a:hover,#s36b-b:hover,#s36b-c:hover,
+#s37b-a:hover,#s37b-b:hover,#s37b-c:hover,
+#s38b-a:hover,#s38b-b:hover,#s38b-c:hover,
+#p31b-a:hover,#p31b-b:hover,#p31b-c:hover,
+#p32b-a:hover,#p32b-b:hover,#p32b-c:hover,
+#p33b-a:hover,#p33b-b:hover,#p33b-c:hover,
+#p34b-a:hover,#p34b-b:hover,#p34b-c:hover,
+#p35b-a:hover,#p35b-b:hover,#p35b-c:hover,
+#p36b-a:hover,#p36b-b:hover,#p36b-c:hover,
+#p37b-a:hover,#p37b-b:hover,#p37b-c:hover,
+#p38b-a:hover,#p38b-b:hover,#p38b-c:hover,
+#ea31b-a:hover,#ea31b-b:hover,#ea31b-c:hover,
+#ea32b-a:hover,#ea32b-b:hover,#ea32b-c:hover,
+#ea33b-a:hover,#ea33b-b:hover,#ea33b-c:hover,
+#ea34b-a:hover,#ea34b-b:hover,#ea34b-c:hover,
+#ea35b-a:hover,#ea35b-b:hover,#ea35b-c:hover,
+#ea36b-a:hover,#ea36b-b:hover,#ea36b-c:hover,
+#ea37b-a:hover,#ea37b-b:hover,#ea37b-c:hover,
+#ea38b-a:hover,#ea38b-b:hover,#ea38b-c:hover{
+	background: #E6E6E6;
+}
+
+#diente31b-a,#diente32b-a,#diente33b-a,#diente34b-a,#diente35b-a,#diente36b-a,#diente37b-a,#diente38b-a{
+	height: 155px;
+	background-repeat: no-repeat;
+}
+#diente31b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-31b.png');
+	width:38px;
+	background-position: 0 19px;
+	background-repeat: no-repeat;
+}
+#diente32b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-32b.png');
+	width:38px;
+	background-position: 0 15px;
+	background-repeat: no-repeat;
+}
+#diente33b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-33b.png');
+	width:40px;
+	background-position: 0 12px;
+	background-repeat: no-repeat;
+}
+#diente34b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-34b.png');
+	width:43px;
+	background-position: 0 13px;
+	background-repeat: no-repeat;
+}
+#diente35b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-35b.png');
+	width:45px;
+	background-position: 0 20px;
+	background-repeat: no-repeat;
+}
+#diente36b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-36b.png');
+	width:68px;
+	background-position: 0 23px;
+	background-repeat: no-repeat;
+}
+#diente37b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-37b.png');
+	width:63px;
+	background-position: 0 21px;
+	background-repeat: no-repeat;
+}
+#diente38b-a{
+	background: url('img/tabla8/periodontograma-dientes-abajo-38b.png');
+	width:63px;
+	background-position: 0 24px;
+	background-repeat: no-repeat;
+}
+
+
+#pi18,#pi17,#pi16,#pi15,#pi14,#pi13,#pi12,#pi11,
+#pi28,#pi27,#pi26,#pi25,#pi24,#pi23,#pi22,#pi21{
+	width: 35px;
+}
+
+
+#lineas-gr,#lineas-gr-inf{
+	width: 400px;
+	height: 160px;
+	position:absolute;
+	background: url('img/fondo-grafico.png') repeat-x;
+}
+#lineas-gr{
+	background: url('img/fondo-grafico.png') repeat-x;
+}
+#lineas-gr-inf{
+	background: url('img/fondo-grafico-inf.png') repeat-x;
+	margin: 0px 0 0;
+}
+
+/* media:print */
+img {
+    visibility: visible;
+}
+
+iframe {background-color:transparent;}
+
+/* special functions */
+
+/* For Appliying class for "Anchura Encias" */
+.normal-gums{ color: #000; }
+.abnormal-gums{ color: #ff0000;}

@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<div style="text-align: center; color: #646464;">
+<h1 style="text-align: center; color: #646464;">Error 404: Página No Encontrada</h1>
+<br />
+<h4 style="color: #378dd6;">Está usted en la web de SEPA, la Sociedad Española de Periodoncia y Osteointegración</h4>
+<br />
+<h5 style="text-align: center; color: #646464;">Lo sentimos, parece ser que la página que busca no existe o no se pudo encontrar.</h5>
+<br />
+<h6 style="text-align: center; color: #646464;">Si quieres, puedes volver a la página principal de <a href="http://sepa.es/index.php">www.sepa.es</a></h6>
+</div>
+
+</body>
+</html>
