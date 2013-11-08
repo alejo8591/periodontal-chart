@@ -4034,4 +4034,37 @@ $(document).ready(function(){
 	$('#mg41-a, #mg42-b, #mg41-c').change(function(event) {
 		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar41a();
 	});
+	// ---------------------------------------------------------------------
+	// Operations for "Profundidad Sondaje" 48a
+	$('#ps48-a, #ps48-b, #ps48-c').change(function(event) {
+		cargar48a();getDefectos();
+	});
+	// Operations for "Profundidad Sondaje" 47a
+	$('#ps47-a, #ps47-b, #ps47-c').change(function(event) {
+		cargar47a();getDefectos();
+	});
+	// Operations for "Profundidad Sondaje" 46a
+	$('#ps46-a, #ps46-b, #ps46-c').change(function(event) {
+		cargar46a();getDefectos();
+	});
+	// Operations for "Profundidad Sondaje" 45a
+	$('#ps45-a, #ps45-b, #ps45-c').change(function(event) {
+		cargar45a();getDefectos();
+	});
+	// Operations for "Profundidad Sondaje" 44a
+	$('#ps44-a, #ps44-b, #ps44-c').change(function(event) {
+		cargar44a();getDefectos();
+	});
+	// Operations for "Profundidad Sondaje" 43a
+	$('#ps43-a, #ps43-b, #ps43-c').change(function(event) {
+		cargar43a();getDefectos();
+	});
+	// Operations for "Profundidad Sondaje" 42a
+	$('#ps42-a, #ps42-b, #ps42-c').change(function(event) {
+		cargar42a();getDefectos();
+	});
+	// Operations for "Profundidad Sondaje" 41a
+	$('#ps41-a, #ps41-b, #ps41-c').change(function(event) {
+		cargar41a();getDefectos();
+	});
 });

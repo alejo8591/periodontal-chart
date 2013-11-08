@@ -236,7 +236,16 @@ background: url('img/periodontograma-oblicuas.png') repeat-x center;
 #ps25-a,#ps25-b,#ps25-c,
 #ps26-a,#ps26-b,#ps26-c,
 #ps27-a,#ps27-b,#ps27-c,
-#ps28-a,#ps28-b,#ps28-c {
+#ps28-a,#ps28-b,#ps28-c,
+#ps48-a,#ps48-b,#ps48-c,
+#ps47-a,#ps47-b,#ps47-c,
+#ps46-a,#ps46-b,#ps46-c,
+#ps45-a,#ps45-b,#ps45-c,
+#ps44-a,#ps44-b,#ps44-c,
+#ps43-a,#ps43-b,#ps43-c,
+#ps42-a,#ps42-b,#ps42-c,
+#ps41-a,#ps41-b,#ps41-c
+ {
 	color: #333;
 }
 
