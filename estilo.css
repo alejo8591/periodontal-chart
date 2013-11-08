@@ -1518,6 +1518,17 @@ background: url('img/periodontograma-oblicuas.png') repeat-x center;
 	background-repeat: no-repeat;
 }
 
+#ps31-a,#ps31-b,#ps31-c,
+#ps32-a,#ps32-b,#ps32-c,
+#ps33-a,#ps33-b,#ps33-c,
+#ps34-a,#ps34-b,#ps34-c,
+#ps35-a,#ps35-b,#ps35-c,
+#ps36-a,#ps36-b,#ps36-c,
+#ps37-a,#ps37-b,#ps37-c,
+#ps38-a,#ps38-b,#ps38-c {
+	color: #333;
+}
+
 /*TABLA 7*/
 #d48b,#d47b,#d46b,#d45b,#d44b,#d43b,#d42b,#d41b{
 	text-align: center;
