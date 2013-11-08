@@ -1296,6 +1296,62 @@ background: url('img/periodontograma-oblicuas.png') repeat-x center;
 	background-repeat: no-repeat;
 }
 
+/* ----------------------------------------------------------------------- */
+/* visualization svg of google  visualization */
+#visualization48a {
+	width: 48px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 7px;
+}
+
+#visualization47a {
+	width: 43px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization46a {
+	width: 44px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 12px;
+}
+#visualization45a {
+	width: 23px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization44a {
+	width: 25px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization43a {
+	width: 23px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
+#visualization42a {
+	width: 17px;
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+#visualization41a {
+	width: 18px; 
+	height: 160px;
+	position:absolute;
+	margin:0 0 0 8px;
+}
+
 /*TABLA 6 */
 
 #d31,#d32,#d33,#d34,#d35,#d36,#d37,#d38{

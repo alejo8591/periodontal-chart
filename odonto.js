@@ -4067,4 +4067,38 @@ $(document).ready(function(){
 	$('#ps41-a, #ps41-b, #ps41-c').change(function(event) {
 		cargar41a();getDefectos();
 	});
+	// ---------------------------------------------------------------------
+	// Operations for "Margen gingivial" 31
+	$('#mg31-a, #mg31-b, #mg31-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar31a();
+	});
+	// Operations for "Margen gingivial" 32
+	$('#mg32-a, #mg32-b, #mg32-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar22a();
+	});
+	// Operations for "Margen gingivial" 33
+	$('#mg33-a, #mg33-b, #mg33-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar33a();
+	});
+	// Operations for "Margen gingivial" 34
+	$('#mg34-a, #mg34-b, #mg34-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar34a();
+	});
+	// Operations for "Margen gingivial" 35
+	$('#mg35-a, #mg35-b, #mg35-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar35a();
+	});
+	// Operations for "Margen gingivial" 36
+	$('#mg36-a, #mg36-b, #mg36-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar36a();
+	});
+	// Operations for "Margen gingivial" 37
+	$('#mg37-a, #mg37-b, #mg37-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar37a();
+	});
+	// Operations for "Margen gingivial" 38
+	$('#mg38-a, #mg38-b, #mg38-c').change(function(event) {
+		getDefectos(); rangoNumeroMargen($(this).attr('name')); cargar38a();
+	});
+	// ---------------------------------------------------------------------
 });
