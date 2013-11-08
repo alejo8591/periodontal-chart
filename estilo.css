@@ -139,6 +139,7 @@ h2{
 input{
 	width: 11px;
 	height: 18px;
+	padding: 0;
 	margin: 0;
 	font-size: 9px;
 	border: none;
